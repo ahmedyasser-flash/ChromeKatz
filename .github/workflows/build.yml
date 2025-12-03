@@ -65,3 +65,10 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/')
         with:
           files: ChromeKatzBOFs.zip
+      - name: Upload CookieKatz EXE
+        uses: actions/upload-artifact@v4
+        with:
+          name: CookieKatz-Build
+          path: |
+            **/*.exe
+            **/*.bin
